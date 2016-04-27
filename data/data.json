@@ -1,0 +1,69 @@
+{
+  "hotwords" :
+  [
+    {"name": "家装节", "href":"javascript:void(0)","class":"style-red"},
+    {"name": "白条领券", "href":"javascript:void(0)"},
+    {"name": "全场1元", "href":"javascript:void(0)"},
+    {"name": "9.9抢大牌", "href":"javascript:void(0)"},
+    {"name": "查理九世", "href":"javascript:void(0)"},
+    {"name": "渔具", "href":"javascript:void(0)"},
+    {"name": "情侣装短袖", "href":"javascript:void(0)"},
+    {"name": "1元专享", "href":"javascript:void(0)"},
+    {"name": "豆豆鞋", "href":"javascript:void(0)"}
+  ],
+  "news" :
+  [
+    {"title":"特惠","content":"免费抽原汁机 小熊电器！","href":"javascript:void(0)"},
+    {"title":"公告","content":"西藏开店 京东帮实现全国覆盖","href":"javascript:void(0)"},
+    {"title":"特惠","content":"京豆换免运费券，礼包任性领","href":"javascript:void(0)"},
+    {"title":"公告","content":"日本花王集团签约京东全球购","href":"javascript:void(0)"},
+    {"title":"特惠","content":"全球购周年庆 赢机票，游世界","href":"javascript:void(0)"}
+  ],
+  "service" :
+  [
+    {"name":"手机"},{"name":"机票"},{"name":"电影票"},{"name":"游戏"},{"name":"彩票"},
+    {"name":"团购"},{"name":"酒店"},{"name":"火车票"},{"name":"众筹"},{"name":"理财"},
+    {"name":"礼品卡"},{"name":"白条"}
+  ],
+  "item" :
+  [
+    {"name":"家用电器"},
+    {"name":"手机、数码、京东通信"},
+    {"name":"电脑、办公"},
+    {"name":"家居、家具、家装、厨具"},
+    {"name":"男装、女装、内衣、珠宝"},
+    {"name":"个户化妆、清洁用品"},
+    {"name":"鞋靴、箱包、珠宝、奢侈品"},
+    {"name":"运动户外、钟表"},
+    {"name":"汽车、汽车用品"},
+    {"name":"母婴、玩具乐器"},
+    {"name":"食品、酒类、生鲜、特产"},
+    {"name":"营养保健"},
+    {"name":"图书、音像、电子书"},
+    {"name":"彩票、旅行、充值、票务"},
+    {"name":"理财、众筹、白条、保险"}
+  ],
+  "guess" :
+  [
+    {"title":"华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)", "price":"69.00","path":"./images/guess1.jpg"},
+    {"title":"金龙鱼 阳光葵花籽油5L（促销捆绑装，捆绑商品随机配送）", "price":"74.90","path":"./images/guess2.jpg"},
+    {"title":"融氏 鲜胚玉米油5L（一级压榨非转基因）", "price":"88.80","path":"./images/guess3.jpg"},
+    {"title":"美的（Midea）电水壶1.5L 304不锈钢电热水壶 无缝内胆双层防烫烧水壶 WH415E2g", "price":"139","path":"./images/guess4.jpg"},
+    {"title":"九阳（Joyoung）电水壶双层保温防烫K15-F626（美好的不用太昂贵）", "price":"168.90","path":"./images/guess5.jpg"},
+    {"title":"威古氏(VEGOOS)偏光太阳镜男款司机驾驶眼镜潮男女士墨镜蛤蟆镜可配近视太阳镜3025M 枪框灰片 标准码", "price":"55.00","path":"./images/guess6.jpg"},
+    {"title":"望客wangcl 太阳镜男女款时尚偏光眼镜 炫彩膜墨镜蛤蟆镜 可配近视驾驶镜 3026 黑框-灰黑片", "price":"34.90","path":"./images/guess7.jpg"},
+    {"title":"鸿星尔克男鞋 板鞋男款 休闲运动鞋 秋冬季透气防滑男子学生滑板平板鞋耐磨复古减震旅游鞋子 正白/深绿(图纹款) 39", "price":"150.00","path":"./images/guess8.jpg"},
+    {"title":"李宁男鞋 新款潮流滑板鞋舒适透气运动板鞋 低帮时尚运动鞋休闲鞋ALCH043 冷灰8C/李宁白 39码6.5(240mm)", "price":"132.80","path":"./images/guess9.jpg"},
+    {"title":"内蒙古科尔沁 休闲零食 风干牛肉干原味400g", "price":"54.90","path":"./images/guess10.jpg"},
+    {"title":"【良品铺子】风味猪肉脯200g*2袋 猪肉干肉片 休闲零食 肉干肉脯", "price":"32.00","path":"./images/guess11.jpg"},
+    {"title":"联想（ThinkCentre）E73S（10EN001ACD） 小机箱台式电脑 （I3-4160T 4GB 500GB 核显 串并口 Win7）", "price":"2450.00","path":"./images/guess12.jpg"},
+    {"title":"Apple iMac 21.5英寸一体机（Core i5 处理器/8GB内存/1TB存储 MK142CH/A）", "price":"3274.90","path":"./images/guess13.jpg"},
+    {"title":"帮宝适 Pampers 超薄干爽 婴儿纸尿裤 加大号XL128片【12-17kg】", "price":"10.50","path":"./images/guess14.jpg"},
+    {"title":"好奇 Huggies 金装 婴儿纸尿裤 新生儿NB70+10片【0-5kg】", "price":"9.80","path":"./images/guess15.jpg"},
+    {"title":"佳能（Canon） EOS 700D 单反套机 （EF-S 18-55mm f/3.5-5.6 IS STM 镜头）", "price":"454.00","path":"./images/guess16.jpg"},
+    {"title":"尼康（Nikon）D7100 单反套机（ AF-S 18-140mmf/3.5-5.6G ED VR 镜头）", "price":"774.90","path":"./images/guess17.jpg"},
+    {"title":"得力(deli)8551 筒装彩色长尾夹/长尾票夹 12只/筒", "price":"74.90","path":"./images/guess18.jpg"},
+    {"title":"猛斯克（MSEK） NZK3011男士牛仔裤 时尚休闲直筒牛仔裤 深蓝色29", "price":"88.00","path":"./images/guess19.jpg"}
+
+  ]
+}

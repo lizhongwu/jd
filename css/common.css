@@ -1,0 +1,47 @@
+/*左浮动*/
+.fl {
+    float: left;
+}
+/*右浮动*/
+.fr {
+    float: right;
+}
+/*清除浮动*/
+.clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+/*a*/
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+    text-decoration: none;
+}
+
+.style-red {
+    color: #C81623;/*文字颜色*/
+}
+
+/*内边距*/
+.dt{
+    float: left;/*浮动:左浮动*/
+    padding: 0 8px;/*内边距:上下0 左右8px*/
+}
+
+.hide {
+    display: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    text-align: center;
+}

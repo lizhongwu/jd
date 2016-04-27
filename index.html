@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>京东(JD.COM)-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
+    <link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/pseudo.css">
+    <link type="text/css" rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<!--顶部-->
+<div class="top-container">
+    <div id="top" class="top">
+        <!--左侧菜单-->
+        <ul class="fl">
+            <li class="area dorpdown">
+                <div class="dt icon">
+                    <i class="right">
+                        <s>◇</s>
+                    </i>
+                </div>
+                <a href="javascript:void(0)">送至：<span id="areaSel">北京</span> </a>
+
+                <div class="dd dorpdown-layer sz">
+                    <div class="dd-spacer szs"></div>
+                    <ul id="area">
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--右侧菜单-->
+        <ul class="fr">
+            <li class="login">
+                <a href="javascript:void(0)">你好，请登录</a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" class="style-red">免费注册</a>
+            </li>
+            <li class="spacer"></li>
+            <li>
+                <div class="dt"><a href="javascript:void(0)">我的订单</a></div>
+            </li>
+            <li class="spacer"></li>
+            <li class="dorpdown">
+                <div class="dt icon">
+                    <i class="right">
+                        <s>◇</s>
+                    </i>
+                    <a href="javascript:void(0)">我的京东</a>
+                </div>
+                <div class="dd dorpdown-layer">
+                    <div class="dd-spacer"></div>
+                    <img src="./images/panel/t1.png"/>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li>
+                <div class="dt"><a href="javascript:void(0)">京东会员</a></div>
+            </li>
+            <li class="spacer"></li>
+            <li>
+                <div class="dt"><a href="javascript:void(0)">企业采购</a></div>
+            </li>
+            <li class="spacer"></li>
+            <li class="app dorpdown">
+                <div class="dt icon">
+                    <i class="right"><s>◇</s></i>
+                    <i class="mobile"></i>
+                    <a href="javascript:void(0)">手机京东</a>
+                </div>
+                <div class="dd dorpdown-layer sj">
+                    <div class="dd-spacer sjs"></div>
+                    <img src="./images/panel/t2.png"/>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li class="dorpdown">
+                <div class="dt icon">
+                    <i class="right">
+                        <s>◇</s>
+                    </i>
+                    <a href="javascript:void(0)">关注京东</a>
+                </div>
+                <div class="dd dorpdown-layer gz">
+                    <div class="dd-spacer"></div>
+                    <img src="./images/panel/t3.png"/>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li class="dorpdown">
+                <div class="dt icon">
+                    <i class="right">
+                        <s>◇</s>
+                    </i>
+                    <a href="javascript:void(0)">客户服务</a>
+                </div>
+                <div class="dd dorpdown-layer fw">
+                    <div class="dd-spacer"></div>
+                    <img src="./images/panel/t4.png"/>
+                </div>
+            </li>
+            <li class="spacer"></li>
+            <li> <!--class="dorpdown"-->
+                <div class="dt icon">
+                    <i class="right">
+                        <s>◇</s>
+                    </i>
+                    <a href="javascript:void(0)">网站导航</a>
+                </div>
+                <!--<div class="dd dorpdown-layer dh">
+                    <div class="dd-spacer dhs"></div>
+                </div>-->
+            </li>
+        </ul>
+        <span class="clr"></span>
+    </div>
+</div>
+<div id="top-banner" style="position:relative;width:100%;height:80px;margin:0px auto 0px;background-color:#f68865;">
+    <div class="w" style="position:relative;">
+        <a href="javascript:void(0)" id="topbanner-close"
+           style="position: absolute;right:5px;top:5px;display:block;width:19px;height:19px;background:url(./images/icon3.png) no-repeat 0 0;"></a>
+        <a href="javascript:void(0)">
+            <img src="./images/ad0.jpg" width="1210" height="80">
+        </a>
+    </div>
+</div>
+<div class="bottom">
+    <!--logo-->
+    <div class="logo">
+        <a class="logo"></a>
+    </div>
+    <!--搜索框-->
+    <div class="search">
+        <input type="text" placeholder="闪购"><input type="button" value="搜索">
+    </div>
+    <!--购物车-->
+    <div class="cart dorpdown">
+        <div class="cart-icon">
+            <i class="ci-l"></i>
+            <i class="ci-r">></i>
+            <i class="ci-count">0</i>
+            <a href="javascript:void(0)">我的购物车</a>
+        </div>
+        <div class="dd dorpdown-layer cartdl">
+            <div class="dd-spacer carts"></div>
+            <img src="./images/panel/t5.png"/>
+        </div>
+    </div>
+    <!--关键字-->
+    <div id="hotWords" class="hot-words"></div>
+    <span class="clr"></span>
+</div>
+
+<div class="nav-container">
+    <div class="nav">
+        <div class="classify">
+            <div class="dt">
+                <a href="javascript:void(0)">全部商品分类</a>
+            </div>
+            <div class="sub">
+                <div id="classify" class="inner"></div>
+            </div>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="javascript:void(0)">服装城</a></li>
+                <li><a href="javascript:void(0)">美妆馆</a></li>
+                <li><a href="javascript:void(0)">超市</a></li>
+                <li><a href="javascript:void(0)">全球购</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript:void(0)">闪购</a></li>
+                <li><a href="javascript:void(0)">团购</a></li>
+                <li><a href="javascript:void(0)">拍卖</a></li>
+                <li><a href="javascript:void(0)">金融</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="focus">
+    <div id="slider" class="slider">
+        <ul>
+            <li>
+                <div class="inner"><a href="javascript:void(0)">
+                    <img src="images/slider1.jpg" alt="" width="730" height="454"/></a></div>
+            </li>
+            <li>
+                <div class="inner"><a href="javascript:void(0)"><img src="images/slider2.jpg" alt=""/></a></div>
+            </li>
+            <li>
+                <div class="inner"><a href="javascript:void(0)"><img src="images/slider3.jpg" alt=""/></a></div>
+            </li>
+            <li>
+                <div class="inner"><a href="javascript:void(0)"><img src="images/slider4.jpg" alt=""/></a></div>
+            </li>
+            <li>
+                <div class="inner"><a href="javascript:void(0)"><img src="images/slider5.jpg" alt=""/></a></div>
+            </li>
+            <li>
+                <div class="inner"><a href="javascript:void(0)"><img src="images/slider6.jpg" alt=""/></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="r-container">
+    <div class="news">
+        <div class="mt">
+            <h2>京东快报</h2>
+
+            <div class="extra">
+                <a href="javascript:void(0)">更多 &gt;</a>
+            </div>
+        </div>
+        <div class="mc">
+            <ul id="news"></ul>
+        </div>
+    </div>
+    <div class="service">
+        <ul></ul>
+        <div id="serviceTab" class="mc-inner hide">
+            <div class="hide">
+                <a class="close">×</a>
+                <img src="./images/panel/s1.png" style="margin-top: 12px;margin-left:5px;text-align: center"/>
+            </div>
+            <div class="hide">
+                <a class="close">×</a>
+                <img src="./images/panel/s2.png" style="margin-top: 12px;text-align: center"/>
+            </div>
+            <div class="hide">
+                <a class="close">×</a>
+                <img src="./images/panel/s3.png" style="margin-top: 12px;text-align: center"/>
+            </div>
+            <div class="hide">
+                <a class="close">×</a>
+                <img src="./images/panel/s4.png" style="margin-top: 12px;text-align: center"/>
+            </div>
+        </div>
+    </div>
+    <div class="r-ad">
+        <a href="javascript:void(0)"><img src="./images/ad1.jpg" width="250" height="75"></a>
+    </div>
+</div>
+
+<div class="today">
+    <div class="mt">
+        <div class="jd-clock-wrap">
+            <div class="jd-clock">
+                <div class="jd-clock-h" id="jdClockHours" style="transform: rotate(266deg);"></div>
+                <div class="jd-clock-m"></div>
+                <div class="jd-clock-s"></div>
+            </div>
+        </div>
+    </div>
+    <div class="slider2">
+        <ul class="inner">
+            <li>
+                <img width="248" height="166" src="./images/slider-2-1.jpg">
+                <img width="248" height="166" src="./images/slider-2-2.jpg">
+                <img width="248" height="166" src="./images/slider-2-3.jpg">
+                <img width="248" height="166" src="./images/slider-2-4.jpg">
+            </li>
+            <li>
+                <img width="248" height="166" src="./images/slider-2-1.jpg">
+                <img width="248" height="166" src="./images/slider-2-2.jpg">
+                <img width="248" height="166" src="./images/slider-2-3.jpg">
+                <img width="248" height="166" src="./images/slider-2-4.jpg">
+            </li>
+            <li>
+                <img width="248" height="166" src="./images/slider-2-1.jpg">
+                <img width="248" height="166" src="./images/slider-2-2.jpg">
+                <img width="248" height="166" src="./images/slider-2-3.jpg">
+                <img width="248" height="166" src="./images/slider-2-4.jpg">
+            </li>
+            <li>
+                <img width="248" height="166" src="./images/slider-2-1.jpg">
+                <img width="248" height="166" src="./images/slider-2-2.jpg">
+                <img width="248" height="166" src="./images/slider-2-3.jpg">
+                <img width="248" height="166" src="./images/slider-2-4.jpg">
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="guess-like">
+    <div class="guessyou">
+        <div class="mt">
+            <h2>猜你喜欢</h2>
+            <a href="javascript:void(0)" class="extra" id="changeGuess">换一批</a>
+        </div>
+        <div class="mc">
+            <div class="spacer"><i></i></div>
+            <ul id="guess"></ul>
+        </div>
+    </div>
+</div>
+<div class="special-buy">
+    <div class="home-special-buy">
+        <h2>京东 · 品质生活</h2>
+
+        <div class="hs-content">
+            <div class="has-col1">
+                <a href="javascript:void(0)" class="has-item">
+                    <p class="area-tit">新发现</p>
+
+                    <div class="sub-tit">
+                        <p class="tit">尚新品</p>
+
+                        <p class="desc">不戴3D眼镜看电影</p>
+
+                        <p class="promotion">裸眼3D智能娱乐终端</p>
+                    </div>
+                    <img src="./images/special1.jpg">
+                </a>
+                <a href="javascript:void(0)" class="has-item-small">
+                    <div class="sub-tit">
+                        <p class="tit">新趋势</p>
+
+                        <p class="desc">智能健身手环</p>
+
+                        <p class="promotion">金属表带时尚必备</p>
+                    </div>
+                    <img src="./images/special2.jpg">
+                </a>
+                <a href="javascript:void(0)" class="has-item-small">
+                    <div class="sub-tit">
+                        <p class="tit">新趋势</p>
+
+                        <p class="desc">智能健身手环</p>
+
+                        <p class="promotion">金属表带时尚必备</p>
+                    </div>
+                    <img src="./images/special2.jpg">
+                </a>
+            </div>
+            <div class="has-col2">
+                <a href="javascript:void(0)" class="has-item">
+                    <p class="area-tit">好物100</p>
+
+                    <div class="sub-tit">
+                        <p class="tit">发现好物</p>
+
+                        <p class="desc">机械高手必备</p>
+
+                        <p class="promotion">秒变游戏大神</p>
+                    </div>
+                    <img src="./images/special3.jpg">
+                </a>
+                <a href="javascript:void(0)" class="has-item-small">
+                    <div class="sub-tit">
+                        <p class="tit">新趋势</p>
+
+                        <p class="desc">智能健身手环</p>
+
+                        <p class="promotion">金属表带时尚必备</p>
+                    </div>
+                    <img src="./images/special4.jpg">
+                </a>
+            </div>
+            <div class="has-col3">
+                <a href="javascript:void(0)" class="has-item">
+                    <p class="area-tit">品牌街</p>
+
+                    <div class="sub-tit">
+                        <p class="tit">今日大牌</p>
+
+                        <p class="desc">七匹狼品牌日</p>
+
+                        <p class="promotion">满199减80</p>
+                    </div>
+                    <img src="./images/special5.jpg">
+                </a>
+                <a href="javascript:void(0)" class="has-item-small">
+                    <div class="sub-tit">
+                        <p class="tit">新趋势</p>
+
+                        <p class="desc">智能健身手环</p>
+
+                        <p class="promotion">金属表带时尚必备</p>
+                    </div>
+                    <img src="./images/special2.jpg">
+                </a>
+                <a href="javascript:void(0)" class="has-item-small">
+                    <div class="sub-tit">
+                        <p class="tit">新趋势</p>
+
+                        <p class="desc">智能健身手环</p>
+
+                        <p class="promotion">金属表带时尚必备</p>
+                    </div>
+                    <img src="./images/special2.jpg">
+                </a>
+            </div>
+            <div class="brands-left">
+                <ul>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                </ul>
+            </div>
+            <div class="brands-right">
+                <ul>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                    <li><a href="javascript:void(0)" class="item"><img
+                            src="./images/brands1.jpg"
+                            alt=""/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="floor-banner">
+    <div class="floor-banner-main">
+        <img src="./images/fbanner1.jpg" width="400"
+             height="125">
+        <img src="./images/fbanner2.jpg" width="400"
+             height="125">
+        <img src="./images/fbanner3.jpg" width="400"
+             height="125">
+    </div>
+</div>
+
+<div class="w floor lazy-fn lazy-fn-done floor-current" id="f1">
+    <div id="clothes" class="m">
+        <div class="mt">
+            <h2><i>1F</i>服装鞋包</h2>
+            <ul class="tab">
+                <li class="tab-item tab-selected" style="width: 58px;"><a href="javascript:void(0)">大牌</a><span>◆</span>
+                </li>
+                <li class="tab-item"><a href="javascript:void(0)">男装</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">女装</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">鞋靴</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">箱包</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">内衣配饰</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">珠宝首饰</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">奢品礼品</a><span>◆</span></li>
+                <li class="tab-item"><a href="javascript:void(0)">奢华腕表</a><span style="background: rgb(255, 255, 255);">◆</span>
+                </li>
+            </ul>
+        </div>
+        <div class="mc">
+            <div class="side">
+                <div class="side-inner">
+                    <div class="banner">
+                        <a href="javascript:void(0)" title=""><img
+                                src="./images/f1-1.jpg"
+                                width="330" height="475" alt=""></a>
+                    </div>
+                    <ul class="themes">
+                        <li class="fore1">
+                            <a href="javascript:void(0)">
+                                <i class="icon"></i>
+                                <span>男装</span>
+                            </a>
+                        </li>
+                        <li class="fore2">
+                            <a href="javascript:void(0)">
+                                <i class="icon"></i>
+                                <span>女装</span>
+                            </a>
+                        </li>
+                        <li class="fore3">
+                            <a href="javascript:void(0)">
+                                <i class="icon"></i>
+                                <span>内衣</span>
+                            </a>
+                        </li>
+                        <li class="fore4">
+                            <a href="javascript:void(0)">
+                                <i class="icon"></i>
+                                <span>鞋靴</span>
+                            </a>
+                        </li>
+                        <li class="fore5">
+                            <a href="javascript:void(0)">
+                                <i class="icon"></i>
+                                <span>箱包</span>
+                            </a>
+                        </li>
+                        <li class="fore6">
+                            <a href="javascript:void(0)">
+                                <i class="icon"></i>
+                                <span>奢侈品</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="words">
+                        <li class="fore1"><a href="javascript:void(0)"><span
+                                class="style-red">女装新品</span></a><a href="javascript:void(0)"
+                                >品质男鞋</a><a
+                                href="javascript:void(0)">服装城</a><a
+                                href="javascript:void(0)"
+                                >太阳镜</a><a href="javascript:void(0)">时尚女鞋</a><a
+                                href="javascript:void(0)"><span class="style-red">男装上新</span></a><a
+                                href="javascript:void(0)">纯棉内裤</a><a
+                                href="javascript:void(0)">奢侈品</a></li>
+                        <li class="fore2"><a href="javascript:void(0)">菩提手串</a><a
+                                href="javascript:void(0)"
+                                ><span class="style-red">水晶手链</span></a><a
+                                href="javascript:void(0)">时尚女包</a><a
+                                href="javascript:void(0)">精品男包</a><a
+                                href="javascript:void(0)"
+                                >小叶紫檀</a><a href="javascript:void(0)"
+                                ><span class="style-red">奢品名表</span></a><a
+                                href="javascript:void(0)">热销腕表</a><a
+                                href="javascript:void(0)">新品首发</a></li>
+                    </ul>
+                </div>
+                <div class="side-extra">
+                    <a href="javascript:void(0)"><img width="328" height="157"
+                                                      src="./images/f1-2.jpg"></a>
+                </div>
+            </div>
+            <div class="main main-selected" style="display: block;">
+                <div class="main-inner">
+                    <ul class="main-body">
+                        <li class="fore1">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-3.jpg"
+                                    width="439" height="157"></a>
+                        </li>
+                        <li class="fore2" id="f1-fore-random"><a
+                                href="javascript:void(0)"><img
+                                src="./images/f1-4.jpg"
+                                width="439" height="157"></a></li>
+                        <li class="fore3">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-5.jpg"
+                                    width="219" height="157"></a>
+                        </li>
+                        <li class="fore4">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-6.jpg"
+                                    width="219" height="157"></a>
+                        </li>
+                        <li class="fore5">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-7.jpg"
+                                    width="219" height="157"></a>
+                        </li>
+                        <li class="fore6">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-8.jpg"
+                                    width="219" height="157"></a>
+                        </li>
+                    </ul>
+                    <ul class="main-extra">
+                        <li class="fore1">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-9.jpg"
+                                    width="219" height="157"></a>
+                        </li>
+                        <li class="fore2">
+                            <a href="javascript:void(0)"><img
+                                    src="./images/f1-10.jpg"
+                                    width="219" height="157"></a>
+                        </li>
+                        <li class="fore3">
+                            <div id="ad6821"><a href="javascript:void(0)"
+                                                title=""><img
+                                    src="./images/f1-11.jpg"
+                                    width="219" height="316"></a></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="slider">
+                    <div class="slider-body" style="position: relative;">
+                        <ul class="slider-main" style="width: 2634px; left: -1756px; position: absolute;">
+                            <li class="slider-panel" style="float: left; display: list-item;"><a
+                                    href="javascript:void(0)"><img
+                                    src="./images/f1-slider-1.jpg"
+                                    width="439" height="315" data-lazy-img="done" alt=""></a></li>
+                            <li class="slider-panel" style="float: left; display: list-item;"><a
+                                    href="javascript:void(0)"
+                                    ><img
+                                    src="./images/f1-slider-2.jpg"
+                                    width="439" height="315"></a></li>
+                            <li class="slider-panel" style="float: left; display: list-item;"><a
+                                    href="javascript:void(0)"
+                                    ><img
+                                    src="./images/f1-slider-3.jpg"
+                                    width="439" height="315"></a></li>
+                            <li class="slider-panel" style="float: left; display: list-item;"><a
+                                    href="javascript:void(0)"
+                                    ><img
+                                    src="./images/f1-slider-4.jpg"
+                                    width="439" height="315"></a></li>
+                            <li class="slider-panel slider-panel-selected" style="float: left; display: list-item;"><a
+                                    href="javascript:void(0)" title=""><img
+                                    src="./images/f1-slider-1.jpg"
+                                    width="439" height="315"></a></li>
+                        </ul>
+                    </div>
+                    <div class="slider-nav">
+                        <ul>
+                            <li class="slider-item  slider-selected"></li>
+                            <li class="slider-item"></li>
+                            <li class="slider-item"></li>
+                            <li class="slider-item"></li>
+                        </ul>
+                    </div>
+                    <div class="slider-page">
+                        <a href="javascript:void(0)" class="slider-prev">&lt;</a>
+                        <a href="javascript:void(0)" class="slider-next">&gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+            <div class="main hide" style="display: none;">数据加载中...</div>
+        </div>
+    </div>
+    <div class="brands">
+        <ul>
+            <li class="fore1"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-1.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore2"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-2.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore3"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-3.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore4"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-4.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore5"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-5.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore6"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-6.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore7"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-7.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore8"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-8.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore9"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-9.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+            <li class="fore10"><a href="javascript:void(0)"><img
+                    src="./images/f1-brands-10.png"
+                    width="100" height="40" alt=""></a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!--2-12F-->
+<div style="text-align: center;display: block">
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f2" src="./images/panel/f2.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f3" src="./images/panel/f3.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f4" src="./images/panel/f4.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f5" src="./images/panel/f5.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f6" src="./images/panel/f6.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f7" src="./images/panel/f7.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f8" src="./images/panel/f8.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f9" src="./images/panel/f9.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f10" src="./images/panel/f10.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f11" src="./images/panel/f11.png"/></div>
+    <div style="width:1210px; height:600px;margin: 0 auto"><img id="f12" src="./images/panel/f12.png"/></div>
+</div>
+
+<!--尾部-->
+<div id="lazy-footer" class="lazy-fn lazy-fn-done">
+    <div id="service-2014">
+        <div class="slogen">
+            <span class="item fore1">
+                <i></i><b>多</b>品类齐全，轻松购物
+            </span>
+            <span class="item fore2">
+                <i></i><b>快</b>多仓直发，极速配送
+            </span>
+            <span class="item fore3">
+                <i></i><b>好</b>正品行货，精致服务
+            </span>
+            <span class="item fore4">
+                <i></i><b>省</b>天天低价，畅选无忧
+            </span>
+        </div>
+    </div>
+    <img src="./images/panel/foot.png"/>
+</div>
+<!--左侧 楼层-->
+<div id="elevator" class="elevator" style="z-index: 5; position: fixed; left: 34.5px; top: 15px; display: block;">
+    <ul>
+        <li class="handler">
+            <a href="javascript:void(0)">1F</a>
+            <a href="javascript:void(0)" class="etitle">服饰</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">2F</a>
+            <a href="javascript:void(0)" class="etitle">美妆</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">3F</a>
+            <a href="javascript:void(0)" class="etitle">手机</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">4F</a>
+            <a href="javascript:void(0)" class="etitle">家电</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">5F</a>
+            <a href="javascript:void(0)" class="etitle">数码</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">6F</a>
+            <a href="javascript:void(0)" class="etitle">运动</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">7F</a>
+            <a href="javascript:void(0)" class="etitle">居家</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">8F</a>
+            <a href="javascript:void(0)" class="etitle">母婴</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">9F</a>
+            <a href="javascript:void(0)" class="etitle">食品</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">10F</a>
+            <a href="javascript:void(0)" class="etitle">图书</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">11F</a>
+            <a href="javascript:void(0)" class="etitle">车品</a>
+        </li>
+        <li class="handler">
+            <a href="javascript:void(0)">12F</a>
+            <a href="javascript:void(0)" class="etitle">服务</a>
+        </li>
+    </ul>
+</div>
+<!--右侧工具栏-->
+<div class="toolbar-warp">
+    <div class="toolbar">
+        <div class="toolbar-tabs">
+            <div class="toolbar-tab">
+                <i class="tab-ico tb-cart"></i>
+                <em class="tab-text">购物车</em>
+            </div>
+            <div class="toolbar-tab">
+                <i class="tab-ico tb-follow"></i>
+                <em class="tab-text">我的关注</em>
+            </div>
+            <div class="toolbar-tab">
+                <i class="tab-ico tb-history"></i>
+                <em class="tab-text">我的足迹</em>
+            </div>
+            <div class="toolbar-tab">
+                <i class="tab-ico tb-message"></i>
+                <em class="tab-text">我的消息</em>
+            </div>
+            <div class="toolbar-tab">
+                <i class="tab-ico tb-jimi"></i>
+                <em class="tab-text">咨询JIMI</em>
+            </div>
+        </div>
+        <div class="toolbar-tabs-footer">
+            <div class="toolbar-tab" id="toolbarTop">
+                <i class="tab-ico tb-top"></i>
+                <em class="tab-text">顶部</em>
+            </div>
+            <div class="toolbar-tab">
+                <i class="tab-ico tb-feedback"></i>
+                <em class="tab-text">反馈</em>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/DOM.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/animate.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/event.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/utils.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/ajax.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/index.js" charset="utf-8" type="text/javascript"></script>
+</body>
+</html>
