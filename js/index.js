@@ -1,33 +1,46 @@
 /*//初始化全部图片的延迟加载 (模拟出效果)
-~(function(window, undefined){
-    document.documentElement.scrollTop = document.body.scrollTop = 0;
-    var oImgs = document.images;
-    for (var i=0;i<oImgs.length;i++) {
-        var oImg = oImgs[i];
-        oImg.flag = true;
-        oImg.realSrc = oImg.src;
-        oImg.scr = "./images/loading.gif";
-        oImg.t = DOM.offset(oImg).top;
-    }
-    on(window, "scroll", function () {
-        var h = (document.documentElement.scrollTop || document.body.scrollTop)+(document.documentElement.clientHeight || document.body.clientHeight);
-        for (var j=0;j<oImgs.length;j++) {
-            if (h > oImgs[j].t + oImgs[j].offsetHeight) {
-                if (oImgs[j].flag) {//控制加载一次
-                    oImgs[j].src = "./images/loading.gif";
-                    var imgTemp = new Image;
-                    imgTemp.src = oImgs[j]["realSrc"]+"?"+Math.random();
-                    ~(function(index){
-                        imgTemp.onload = function() {
-                            oImgs[index].src = this.src;
-                            oImgs[index].flag = false;
-                        };
-                    })(j);
-                }
-            }
-        }
-    })
-})(window);*/
+ ~(function(window, undefined){
+ document.documentElement.scrollTop = document.body.scrollTop = 0;
+ var oImgs = document.images;
+ for (var i=0;i<oImgs.length;i++) {
+ var oImg = oImgs[i];
+ oImg.flag = true;
+ oImg.realSrc = oImg.src;
+ oImg.scr = "./images/loading.gif";
+ oImg.t = DOM.offset(oImg).top;
+ }
+ on(window, "scroll", function () {
+ var h = (document.documentElement.scrollTop || document.body.scrollTop)+(document.documentElement.clientHeight || document.body.clientHeight);
+ for (var j=0;j<oImgs.length;j++) {
+ if (h > oImgs[j].t + oImgs[j].offsetHeight) {
+ if (oImgs[j].flag) {//控制加载一次
+ oImgs[j].src = "./images/loading.gif";
+ var imgTemp = new Image;
+ imgTemp.src = oImgs[j]["realSrc"]+"?"+Math.random();
+ ~(function(index){
+ imgTemp.onload = function() {
+ oImgs[index].src = this.src;
+ oImgs[index].flag = false;
+ };
+ })(j);
+ }
+ }
+ }
+ })
+ })(window);*/
+
+function GetQueryString(name)
+{
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
+}
+
+if (GetQueryString("checkSuccess")) {
+    var isLogin = document.getElementById("isLogin");
+    isLogin.innerHTML = "李仲午,欢迎你";
+}
+
 
 //初始化ajax 获取全部数据
 ~(function () {
@@ -55,7 +68,7 @@
                     cA.innerHTML = hotwordsData[i]["name"];
                     cA.href = hotwordsData[i]["href"];
                     if (hotwordsData[i]["class"]) {
-                        cA.className=hotwordsData[i]["class"];
+                        cA.className = hotwordsData[i]["class"];
                     }
                     hotWords.appendChild(cA);
                 }
@@ -64,20 +77,20 @@
             if (newsData) {
                 //<li><a href="javascript:void(0)"><span>[特惠]</span>免费抽原汁机 小熊电器！</a></li>
                 var news = document.getElementById("news");
-                for (var i=0;i<newsData.length;i++) {
+                for (var i = 0; i < newsData.length; i++) {
                     var cLi = document.createElement("li");
                     news.appendChild(cLi);
                     var cA = document.createElement("a");
                     cA.href = newsData[i]["href"];
                     cLi.appendChild(cA);
                     var cSpan = document.createElement("span");
-                    cSpan.innerHTML = "["+newsData[i]["title"]+"]";
+                    cSpan.innerHTML = "[" + newsData[i]["title"] + "]";
                     cA.appendChild(cSpan);
-                    cA.innerHTML+=newsData[i]["content"];
+                    cA.innerHTML += newsData[i]["content"];
                 }
             }
             //初始化服务
-            if(serviceData) {
+            if (serviceData) {
                 //<li><a href="javascript:void(0)"><i class="ci-left"></i><span>话费</span></a></li>
                 var service = DOM.getElesByClass("service")[0];
                 var oUl = DOM.children(service, "ul")[0];
@@ -95,32 +108,32 @@
                     cA.appendChild(cSpan);
                     oUl.appendChild(cLi);
 
-                    if (i<4 && !cLi.index) {//选择第一排的服务项后 初始化选项卡
-                        cLi.index=i;
-                        on(cLi, "mouseover", function (e) {
+                    if (i < 4 && !cLi.index) {//选择第一排的服务项后 初始化选项卡
+                        cLi.index = i;
+                        on(cLi, "mouseenter", function (e) {
                             DOM.addClass(this, "current");
                             DOM.addClass(oUl, "service-current");
                             serviceTab.style.display = "block";//显示选项卡
-                            animate(serviceTab, {top:28}, 200);
+                            animate(serviceTab, {top: 28}, 200);
 
                             var oIs = oUl.getElementsByTagName("i");
-                            for (var k=0;k<oIs.length;k++) {//隐藏全部服务图标
+                            for (var k = 0; k < oIs.length; k++) {//隐藏全部服务图标
                                 oIs[k].style.display = "none";
                             }
                             //显示被选中的选项卡内容
                             DOM.removeClass(DOM.children(serviceTab)[this.index], "hide");
                         });
 
-                    } else if (i===4) {
+                    } else if (i === 4) {
                         //绑定选项卡事件
                         var current = DOM.children(oUl);
-                        for (var j=0;j<4;j++) {
+                        for (var j = 0; j < 4; j++) {
                             current[j].index = j;
-                            on(current[j], "mouseover", function(e){
+                            on(current[j], "mouseenter", function (e) {
                                 var _this = this;
                                 DOM.addClass(_this, "current");
                                 var siblings = DOM.siblings(_this);
-                                for (var l=0;l<siblings.length;l++) {
+                                for (var l = 0; l < siblings.length; l++) {
                                     DOM.removeClass(siblings[l], "current");
                                 }
                                 //if (_this.t) {
@@ -128,12 +141,12 @@
                                 //    _this.t = null;
                                 //}
                                 //_this.t = window.setTimeout(function () {
-                                    var oPanel = DOM.children(serviceTab, "div")[_this.index];
-                                    DOM.removeClass(oPanel, "hide");
-                                    var otherPanels = DOM.siblings(oPanel);
-                                    for (var l=0;l<otherPanels.length;l++) {
-                                        DOM.addClass(otherPanels[l], "hide");
-                                    }
+                                var oPanel = DOM.children(serviceTab, "div")[_this.index];
+                                DOM.removeClass(oPanel, "hide");
+                                var otherPanels = DOM.siblings(oPanel);
+                                for (var l = 0; l < otherPanels.length; l++) {
+                                    DOM.addClass(otherPanels[l], "hide");
+                                }
                                 //}, 500);
                             });
                         }
@@ -141,25 +154,25 @@
                 }
             }
             //初始化商品大类别
-            if(itemData) {
+            if (itemData) {
                 //<div class="item"><h3><a href="javascript:void(0)">家用电器</a></h3><i>></i></div>
                 var classify = document.getElementById("classify");
-                for (var i=0;i<itemData.length;i++) {
+                for (var i = 0; i < itemData.length; i++) {
                     var cDiv = document.createElement("div");
-                    cDiv.className="item";
+                    cDiv.className = "item";
                     classify.appendChild(cDiv);
                     var cH3 = document.createElement("h3");
                     cDiv.appendChild(cH3);
 
                     var cAinnerHtml = itemData[i]["name"];
                     var aCainnerHtml = cAinnerHtml.split("、");
-                    for (var j=0;j<aCainnerHtml.length;j++) {
+                    for (var j = 0; j < aCainnerHtml.length; j++) {
                         var cA = document.createElement("a");
-                        cA.href="javascript:void(0)";
-                        if (j+1===aCainnerHtml.length){
+                        cA.href = "javascript:void(0)";
+                        if (j + 1 === aCainnerHtml.length) {
                             cA.innerHTML = aCainnerHtml[j];
                         } else {
-                            cA.innerHTML = aCainnerHtml[j]+"、";
+                            cA.innerHTML = aCainnerHtml[j] + "、";
                         }
                         cH3.appendChild(cA);
                     }
@@ -170,8 +183,8 @@
                     cDiv.appendChild(cI);
                     //<div class="items-layer">1</div>
                     var cDiv2 = document.createElement("div");
-                    cDiv2.className="items-layer";
-                    cDiv2.innerHTML="<img  src='./images/panel/c"+(i+1)+".png'/>";
+                    cDiv2.className = "items-layer";
+                    cDiv2.innerHTML = "<img  src='./images/panel/c" + (i + 1) + ".png'/>";
                     classify.appendChild(cDiv2);
                 }
 
@@ -200,50 +213,51 @@
                 }
             }
             //初始化猜你喜欢
-            if(guessData) {
+            if (guessData) {
                 /*<li>
-                <div class="p-img"><a href="javascript:void(0)">
-                <img src="./images/guess1.jpg"
-                alt="" title="华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)" width="130" height="130"/>
-                </a></div>
-                <div class="p-info">
-                <div class="p-name"><a href="javascript:void(0)"
-                title="华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)">华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)</a>
-                </div>
-                <div class="p-price" data-lazyload-fn="done"><i>¥</i>69.00</div>
-                </div>
+                 <div class="p-img"><a href="javascript:void(0)">
+                 <img src="./images/guess1.jpg"
+                 alt="" title="华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)" width="130" height="130"/>
+                 </a></div>
+                 <div class="p-info">
+                 <div class="p-name"><a href="javascript:void(0)"
+                 title="华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)">华为（HUAWEI）原装三键线控带麦半入耳式耳机AM116(尊爵版)</a>
+                 </div>
+                 <div class="p-price" data-lazyload-fn="done"><i>¥</i>69.00</div>
+                 </div>
 
-                </li>*/
+                 </li>*/
                 var guess = document.getElementById("guess");
-                function randomGuess () {
+
+                function randomGuess() {
                     var guessInneHtml = "";
                     var guessAry = [];
                     var randomAry = [];
-                    for (var i=0;i<guessData.length;i++) {
+                    for (var i = 0; i < guessData.length; i++) {
                         guessAry.push(i);
                     }
-                    for (var i=0;i<6;i++) {
-                        var random = Math.floor(Math.random()*guessAry.length);
+                    for (var i = 0; i < 6; i++) {
+                        var random = Math.floor(Math.random() * guessAry.length);
                         var item = guessAry[random];
-                        guessAry[random] = guessAry[guessAry.length-1];
+                        guessAry[random] = guessAry[guessAry.length - 1];
                         guessAry.length--;
                         randomAry.push(item);
                     }
-                    for (var i=0;i<6;i++) {
-                        guessInneHtml += '<li><div class="p-img"><a href="javascript:void(0)"><img src="'+(guessData[randomAry[i]]["path"])+'" title="'+(guessData[randomAry[i]]["title"])+'" width="130" height="130"/></a></div><div class="p-info"> <div class="p-name"><a href="javascript:void(0)" title="'+(guessData[randomAry[i]]["title"])+'">'+(guessData[randomAry[i]]["title"])+'</a></div><div class="p-price"><i>¥</i>'+(guessData[randomAry[i]]["price"])+'</div></div></li>';
+                    for (var i = 0; i < 6; i++) {
+                        guessInneHtml += '<li><div class="p-img"><a href="javascript:void(0)"><img src="' + (guessData[randomAry[i]]["path"]) + '" title="' + (guessData[randomAry[i]]["title"]) + '" width="130" height="130"/></a></div><div class="p-info"> <div class="p-name"><a href="javascript:void(0)" title="' + (guessData[randomAry[i]]["title"]) + '">' + (guessData[randomAry[i]]["title"]) + '</a></div><div class="p-price"><i>¥</i>' + (guessData[randomAry[i]]["price"]) + '</div></div></li>';
                     }
                     guess.innerHTML = guessInneHtml;
                 }
+
                 randomGuess();
                 var changeGuess = document.getElementById("changeGuess");
-                on (changeGuess, "click", randomGuess);
+                on(changeGuess, "click", randomGuess);
             }
         }, error: function (err) {
             console.error(err);
         }
     });
 })();
-
 
 
 //顶部的下拉
@@ -316,56 +330,139 @@
 
 })();
 
-//轮播图
+//轮播图 (待优化)
 ~(function () {
     var slider = document.getElementById("slider");
-    var oLis = slider.getElementsByTagName("li");
+    var sliderPage = DOM.getElesByClass("slider-page",slider)[0];
+    on(slider , "mouseenter", function () {
+        sliderPage.style.display = "block";
+    });
+    on(slider, "mouseleave", function () {
+        sliderPage.style.display = "none";
+    });
+    var oLis = DOM.getElesByClass("inner", slider);
     for (var i = 0; i < oLis.length; i++) {
         var oLi = oLis[i];
         oLi.style.position = "absolute";
-        oLi.style.zIndex = 0;
-        oLi.style.opacity = 0;
+        if (i) {
+            oLi.style.zIndex = 0;
+            oLi.style.opacity = 0;
+        } else {
+            oLi.style.zIndex = 1;
+            oLi.style.opacity = 1;
+        }
     }
 
-    var showIndex = 1;
-    var hideIndex = 0;
-    var maxStep = oLis.length - 1;
-
-    function change() {
-        if (showIndex > maxStep) {
-            hideIndex = maxStep;
-            showIndex = 0;
-        }
-        if (hideIndex > maxStep) {
-            hideIndex = 0;
-            showIndex = 1;
-        }
-        animate(oLis[hideIndex], {"z-index": "0", opacity: 0}, 800);
-        animate(oLis[showIndex], {"z-index": "1", opacity: 1}, 800);
+    var showIndex = 0;
+    function auto () {
         showIndex++;
-        hideIndex++;
-        window.setTimeout(change, 4000);
+        if (showIndex===oLis.length) {
+            showIndex=0;
+        }
+        for (var i = 0; i < oLis.length; i++) {
+            var oLi = oLis[i];
+            if (i !== showIndex) {
+                oLi.style.zIndex = 0;
+                oLi.style.opacity = 0;
+            }
+        }
+        animate(oLis[showIndex], {"z-index": "1", opacity: 1}, 100);
+        changeCur(showIndex);
+    }
+    slider.timer = window.setInterval(auto, 4000);
+
+    var prev = DOM.getElesByClass("slider-prev",sliderPage)[0];
+    var next = DOM.getElesByClass("slider-next",sliderPage)[0];
+
+    prev.onclick = function () {
+        window.clearInterval(slider.timer);
+        slider.timer = null;
+        showIndex--;
+
+        if(showIndex===-1) {
+            showIndex = oLis.length-1;
+        }
+
+        for (var i = 0; i < oLis.length; i++) {
+            var oLi = oLis[i];
+            if (i !== showIndex) {
+                oLi.style.zIndex = 0;
+                oLi.style.opacity = 0;
+            }
+        }
+        animate(oLis[showIndex], {"z-index": "1", opacity: 1}, 100);
+        changeCur(showIndex);
+        slider.timer = window.setInterval(auto, 4000);
+    };
+
+    next.onclick = function () {
+        window.clearInterval(slider.timer);
+        slider.timer = null;
+        showIndex++;
+
+        if (showIndex===oLis.length) {
+            showIndex=0;
+        }
+
+        for (var i = 0; i < oLis.length; i++) {
+            var oLi = oLis[i];
+            if (i !== showIndex) {
+                oLi.style.zIndex = 0;
+                oLi.style.opacity = 0;
+            }
+        }
+        animate(oLis[showIndex], {"z-index": "1", opacity: 1}, 100);
+        changeCur(showIndex);
+        slider.timer = window.setInterval(auto, 4000);
+    };
+
+    var sliderCur = document.getElementById("slider-cur");
+    var oSpans = DOM.children(sliderCur, "span");
+    function changeCur (n) {
+        for (var i=0;i<oSpans.length;i++) {
+            DOM.removeClass(oSpans[i], "cur");
+        }
+        DOM.addClass(oSpans[n], "cur");
     }
 
-    change();
-})();
+    for (var i=0;i<oSpans.length;i++) {
+        oSpans[i].index = i;
+        on (oSpans[i], "mouseenter", function () {
+            window.clearInterval(slider.timer);
+            slider.timer = null;
 
+            showIndex = this.index;
+
+            for (var i = 0; i < oLis.length; i++) {
+                var oLi = oLis[i];
+                if (i !== showIndex) {
+                    oLi.style.zIndex = 0;
+                    oLi.style.opacity = 0;
+                }
+            }
+            animate(oLis[showIndex], {"z-index": "1", opacity: 1}, 100);
+            changeCur(showIndex);
+            slider.timer = window.setInterval(auto, 4000);
+        })
+    }
+
+})();
 
 
 //回到顶部
 ~(function () {
     var toolbarTop = document.getElementById("toolbarTop");
     on(toolbarTop, "click", function (e) {
-        var duration = 1000,interval = 10,target = document.documentElement.scrollTop||document.body.scrollTop,step = (target/duration) * interval;
+        var duration = 1000, interval = 10, target = document.documentElement.scrollTop || document.body.scrollTop, step = (target / duration) * interval;
         toolbarTop.t = window.setInterval(function () {
-            var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
-            var speed  = scrollTop/interval;
-            if (scrollTop===0) {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var speed = scrollTop / interval;
+            if (scrollTop === 0) {
                 window.clearInterval(toolbarTop.t);
                 toolbarTop.t = null;
                 return;
             }
-            scrollTop -= step+speed;
+            scrollTop -= step + speed;
             document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
         }, interval);
 
@@ -377,14 +474,14 @@
     var slider = DOM.getElesByClass("slider2")[0];
     var oUl = DOM.getElesByClass("inner", slider)[0];
     var oLis = DOM.children(oUl, "li");
-
     var step = 0;
-    function autoLeft () {
-        if (step === oLis.length) {
-            step=0
-        }
-        animate(oUl, {left:step*-1000}, 800);
+    function autoLeft() {
         step++;
+        if (step === oLis.length) {
+            oUl.style.left = 0;
+            step = 1;
+        }
+        animate(oUl, {left: step * -1000}, 800);
         window.setTimeout(autoLeft, 3000);
     }
     autoLeft();
@@ -393,7 +490,7 @@
 //关闭顶部广告横幅
 ~(function () {
     var tbc = document.getElementById("topbanner-close");
-    on (tbc, "click", function () {
+    on(tbc, "click", function () {
         document.getElementById("top-banner").style.display = "none";
     });
 })();
@@ -402,70 +499,56 @@
 ~(function (window, undefined) {
     //获取楼层
     var elevator = DOM.children(document.getElementById("elevator"), "ul")[0];
-    var f1 = DOM.offset(document.getElementById("f1")).top;
-    var f2 = DOM.offset(document.getElementById("f2")).top;
-    var f3 = DOM.offset(document.getElementById("f3")).top;
-    var f4 = DOM.offset(document.getElementById("f4")).top;
-    var f5 = DOM.offset(document.getElementById("f5")).top;
-    var f6 = DOM.offset(document.getElementById("f6")).top;
-    var f7 = DOM.offset(document.getElementById("f7")).top;
-    var f8 = DOM.offset(document.getElementById("f8")).top;
-    var f9 = DOM.offset(document.getElementById("f9")).top;
-    var f10 = DOM.offset(document.getElementById("f10")).top;
-    var f11 = DOM.offset(document.getElementById("f11")).top;
-    var f12 = DOM.offset(document.getElementById("f12")).top;
-    var currentAry = [f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12];
+    var currentAry = [];
+    for (var i = 0; i < 12; i++) {
+        currentAry.push(DOM.offset(document.getElementById("f" + (i + 1))).top);
+    }
 
-    on(window, "scroll" ,function () {
-        var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+    on(window, "scroll", function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         //到达F1显示
-        if (scrollTop>f1-200) {
+        if (scrollTop > DOM.offset(document.getElementById("f1")).top - 200) {
             elevator.style.display = "block";
         } else {
             elevator.style.display = "none";
         }
 
-        if (scrollTop>f12+260) {
+        if (scrollTop > DOM.offset(document.getElementById("f12")).top + 260) {
             elevator.style.display = "none";
         }
         //楼层间的切换
-        for (var i=currentAry.length-1;i>=0;i--) {
-            if (scrollTop>currentAry[i]-200) {
+        for (var i = currentAry.length - 1; i >= 0; i--) {
+            if (scrollTop > currentAry[i] - 200) {
                 changeCurrent(i);
                 return;
             }
         }
     });
 
-    function changeCurrent (n) {
-        for(var i=0; i<oLis.length; i++) {
+    var oLis = DOM.children(elevator, "li");
+    function changeCurrent(n) {
+        for (var i = 0; i < oLis.length; i++) {
             DOM.removeClass(oLis[i], "current");
         }
         DOM.addClass(oLis[n], "current");
     }
+})(window);
 
-    //绑定点击事件
-    var oLis = DOM.children(elevator, "li");
-    for(var i=0; i<oLis.length; i++) {
+//1F选项卡
+~(function () {
+    var tab = document.getElementById("f1Tab");
+    var oLis = DOM.children(tab, "li");
+    var oDivs = DOM.getElesByClass("main",document.getElementById("f1Main"));
+    for (var i=0;i<oLis.length;i++) {
         oLis[i].index = i;
-        on(oLis[i], "click", function (e) {
-            //var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
-            //var duration = 1000,interval = 10,target = currentAry[this.index],step = (target/duration) * interval;
-            //this.t = window.setInterval(function () {
-            //    var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
-            //    var speed  = scrollTop/interval;
-            //    if (scrollTop<=target) {
-            //        window.clearInterval(this.t);
-            //        this.t = null;
-            //        return;
-            //    }
-            //    scrollTop -= step+speed;
-            //    document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
-            //}, interval);
-            var body = document.documentElement || document.body;
-            var duration = 1000,interval = 10,target = currentAry[this.index],step = (target/duration) * interval;
-            console.log(target)
-            animate(document.body, {scrollTop:target}, 800);
+        on(oLis[i], "mouseover", function () {
+            DOM.addClass(this, "tab-selected");
+            for (var j=0;j<oLis.length;j++) {
+                DOM.removeClass(oLis[j], "tab-selected");
+                DOM.removeClass(oDivs[j], "main-selected");
+            }
+            DOM.addClass(this, "tab-selected");
+            DOM.addClass(oDivs[this.index], "main-selected");
         });
     }
-})(window);
+})();

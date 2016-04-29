@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>京东-欢迎登陆</title>
+    <link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<img src="images/login/login.png">
+
+<div class="login-form" style="position: absolute; top: 119px;left: 820px">
+    <div class="login-box">
+        <div class="mt">
+            <h1>京东会员</h1>
+            <div class="extra-r">
+                <div class="regist-link"><a href="javascript:void(0);"><b></b>立即注册</a>
+                </div>
+            </div>
+        </div>
+        <div class="msg-wrap">
+            <div class="msg-warn"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+            <div class="msg-error hide" style="display: none;"><b></b></div>
+        </div>
+        <div class="mc">
+            <div class="form">
+                <form id="formlogin" method="post" onsubmit="return false;">
+                    <div class="item item-fore1">
+                        <label for="loginname" class="login-label name-label"></label>
+                        <input id="loginname" type="text" class="itxt" name="loginname" autocomplete="off"
+                               placeholder="邮箱/用户名/已验证手机">
+                        <span class="clear-btn"></span>
+                    </div>
+                    <div id="entry" class="item item-fore2">
+                        <label class="login-label pwd-label" for="nloginpwd"></label>
+                        <label id="sloginpwd" style="display: none;">
+                        </label>
+                        <input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error"
+                               autocomplete="off" placeholder="密码">
+                        <input type="hidden" name="loginpwd" id="loginpwd" value="" class="hide">
+                        <span class="clear-btn"></span>
+                        <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+                    </div>
+                    <div class="item item-fore3">
+                        <div class="safe">
+                            <span>
+                                <input id="autoLogin" name="chkRememberMe" type="checkbox" class="jdcheckbox">
+                                <label>自动登录</label>
+                            </span>
+                            <span class="forget-pw-safe">
+                                <a href="javascript:void(0);">忘记密码?</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="item item-fore5">
+                        <div class="login-btn">
+                            <a href="javascript:;" class="btn-img btn-entry"
+                               id="loginsubmit">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="coagent">
+                <h5>使用合作网站账号登录京东：</h5>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">京东钱包</a>
+                        <span class="line">|</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">QQ</a>
+                        <span class="line">|</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">微信</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="qrcode-login"><!--控制二维码-->
+        <div class="mc">
+            <div class="qrcode-desc"><h2>用京东APP <span class="ml5">扫码安全登录</span></h2></div>
+            <div class="qrcode-error">
+                <b></b>
+                <h6>登录失败</h6>
+                请刷新二维码后重新扫描
+            </div>
+            <div class="qrcode-main">
+                <div class="qrcode-img">
+                    <img id="imgQrcode" src="images/login/show1.png" alt="">
+
+                    <div class="qrcode-error02 hide" id="J-qrcoderror"><a href="#none"> <span class="error-icon"></span>
+
+                        <div class="txt">网络开小差咯<span class="ml10">刷新二维码</span></div>
+                    </a></div>
+                </div>
+                <div class="qrcode-panel">
+                    <ul>
+                        <li class="fore1">
+                            <a id="refreshQrcode" href="javascript:void(0)">刷新二维码</a>
+                        </li>
+                        <li><a href="javascript:void(0)">使用帮助</a></li>
+                    </ul>
+                    <div class="qrcode-tips">
+                        <span>扫描不上，版本过低？</span>
+
+                        <div class="triangle-border tb-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void (0)" id="qrcodeBtn" class="qrcode-target btn-2qrcode" style="outline: rgb(109, 109, 109) none 0px;">扫码登录</a>
+</div>
+<script src="js/DOM.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/animate.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/event.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/utils.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/ajax.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/login.js" charset="utf-8" type="text/javascript"></script>
+</body>
+</html>
